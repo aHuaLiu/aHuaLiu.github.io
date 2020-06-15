@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h2>Fullscreen with JavaScript</h2>
+<p><strong>Tip:</strong> Press the "Esc" key to exit full screen.</p>
+
+<video width="100%" controls id="myvideo">
+  <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
+</video>
+
+<script>
+/* Get the element you want displayed in fullscreen */ 
+var elem = document.getElementById("myvideo");
+elem.requestFullscreen();
+
+</script>
+
+<p>Note: Internet Explorer 10 and earlier does not support fullscreen mode.</p>
+
+</body>
+</html>
+

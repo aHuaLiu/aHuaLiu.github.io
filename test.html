@@ -16,7 +16,16 @@
 <script>
 /* Get the element you want displayed in fullscreen */ 
 var elem = document.getElementById("myvideo");
-elem.requestFullscreen();
+/*elem.requestFullscreen();*/
+/* elem.requestFullscreen(); */
+
+ if (!document.fullscreenElement) {
+    elem.requestFullscreen().catch(err => {
+      alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+    });
+  } else {
+    document.exitFullscreen();
+  }
 
 </script>
 

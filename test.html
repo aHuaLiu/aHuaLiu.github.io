@@ -3,6 +3,16 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script type="text/javascript">
+function clickButton()
+  {
+  var elem = document.getElementById("myvideo");
+  elem.requestFullscreen();
+  }
+</script>
+
 </head>
 <body>
 
@@ -12,22 +22,14 @@
 <video width="100%" controls id="myvideo">
   <source src="https://itsakura.com/wp-content/uploads/2018/03/test1.mp4" type="video/mp4">
 </video>
+</br>
 
-<script>
-/* Get the element you want displayed in fullscreen */ 
-var elem = document.getElementById("myvideo");
-/*elem.requestFullscreen();*/
-/* elem.requestFullscreen(); */
-
- if (!document.fullscreenElement) {
-    elem.requestFullscreen().catch(err => {
-      alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-    });
-  } else {
-    document.exitFullscreen();
-  }
-
-</script>
+<form>
+<input type="radio" id="radio1" />
+<br />
+<input type="button" onclick="clickButton()"
+value="Click" />
+</form>
 
 <p>Note: Internet Explorer 10 and earlier does not support fullscreen mode.</p>
 

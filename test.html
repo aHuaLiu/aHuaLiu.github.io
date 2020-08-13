@@ -8,11 +8,18 @@ function openWin(){
 	myWindow=window.open('https://dmapp.page.link/kMFJgkkY6Ywq2Gnv7');
 	myWindow.focus();
 }
+
+function openWin2(){                                                                
+          myWindow=window.open('intent://dmapp.page.link/kMFJgkkY6Ywq2Gnv7#Intent;package=com.google.android.gms;action=com.google.firebase.dynamiclinks.VIEW_DYNAMIC_LINK;scheme=https;S.browser_fallback_url=https://play.google.com/store/apps/details%3Fid%3Dcom.dailymotion.dailymotion&pcampaignid%3Dfdl_short&url%3Dhttps://www.dailymotion.com/jp');         
+          myWindow.focus();                                                          
+}
+
 </script>
 </head>
 <body>
 <a href="https://dmapp.page.link/kMFJgkkY6Ywq2Gnv7">test</a>
 <input type="button" value="open" onclick="openWin()" />
+<input type="button2" value="open2" onclick="openWin2()" />
 </body>
 </html>
 
